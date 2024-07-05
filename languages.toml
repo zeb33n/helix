@@ -1,0 +1,37 @@
+#C
+[language-server.clangd]
+command = "clangd"
+
+[[language]]
+name = 'c'
+formatter = { command = 'clang-format', args = ['--style=file'] }
+auto-format = true
+
+#RUST
+[language-server.rust-analyzer]
+command = "rust-analyzer"
+
+[[language]]
+name = "rust"
+language-servers = ["rust-analyzer" ]
+formatter = { command = "rustfmt" }
+auto-format = true
+indent = { tab-width = 4, unit = "t" }
+
+#PYTHON
+[[language]]
+name = "python"
+language-servers = [ "pyright", "ruff" ]
+
+[language-server.pyright.config.python.analysis]
+typeCheckingMode = "basic"
+
+[language-server.ruff]
+command = "ruff-lsp"
+
+[language-server.ruff.config.settings]
+args = ["--ignore", "E501"]
+
+[language.formatter]
+command = "black"
+args = ["--line-length", "88", "--quiet", "-"]
