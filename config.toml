@@ -1,4 +1,4 @@
-theme = "zebbox" 
+theme = "zebparent" 
 
 [editor.cursor-shape]
 insert = "bar"
@@ -7,14 +7,15 @@ insert = "bar"
 bufferline = "multiple"
 true-color = true
 line-number = "relative"
+popup-border = "popup"
 
 [editor.lsp]
 display-messages = true
 
 [keys.normal]
 #BUFFERS
-C-left = ":buffer-next"
-C-right = ":buffer-previous"
+C-left = ":buffer-previous"
+C-right = ":buffer-next"
 C-x = ":buffer-close"
 
 #VIMIFICATION

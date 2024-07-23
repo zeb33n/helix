@@ -4,7 +4,8 @@ command = "clangd"
 
 [[language]]
 name = 'c'
-formatter = { command = 'clang-format', args = ['--style=file'] }
+indent = { tab-width = 4, unit = " " }
+formatter = { command = 'clang-format', args = ['--style=Chromium'] }
 auto-format = true
 
 #RUST
@@ -22,6 +23,8 @@ indent = { tab-width = 4, unit = "t" }
 [[language]]
 name = "python"
 language-servers = [ "pyright", "ruff" ]
+formatter = { command = "black", args = ["--line-length", "88", "--quiet", "-"] }
+auto-format = true
 
 [language-server.pyright.config.python.analysis]
 typeCheckingMode = "basic"
@@ -32,6 +35,6 @@ command = "ruff-lsp"
 [language-server.ruff.config.settings]
 args = ["--ignore", "E501"]
 
-[language.formatter]
-command = "black"
-args = ["--line-length", "88", "--quiet", "-"]
+# [language.formatter]
+# command = "black"
+# args = ["--line-length", "88", "--quiet", "-"]
