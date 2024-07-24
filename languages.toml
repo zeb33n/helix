@@ -35,6 +35,15 @@ command = "ruff-lsp"
 [language-server.ruff.config.settings]
 args = ["--ignore", "E501"]
 
+#TS
+[language-server.typescript-language-server]
+command = "typescript-language-server"
+
+[[language]]
+name = 'typescript'
+formatter = { command = 'prettier', args =  ["--parser", "typescript"] }
+auto-format = true
+
 # [language.formatter]
 # command = "black"
 # args = ["--line-length", "88", "--quiet", "-"]
