@@ -8,6 +8,12 @@ indent = { tab-width = 4, unit = " " }
 formatter = { command = 'clang-format', args = ['--style=Chromium'] }
 auto-format = true
 
+[[language]]
+name = 'cpp'
+indent = { tab-width = 8, unit = " " }
+formatter = { command = 'clang-format', args = ['--style=Chromium'] }
+auto-format = true
+
 #RUST
 [language-server.rust-analyzer]
 command = "rust-analyzer"
