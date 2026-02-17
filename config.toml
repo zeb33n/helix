@@ -1,16 +1,19 @@
-theme = "base16_transparent"
-
-[editor.file-picker]
-hidden=false
-
-[editor.cursor-shape]
-insert = "bar"
+theme = "zebparent"
 
 [editor]
 bufferline = "multiple"
 true-color = true
 line-number = "relative"
 popup-border = "popup"
+
+[editor.inline-diagnostics]
+cursor-line = "hint"
+
+[editor.file-picker]
+hidden=false
+
+[editor.cursor-shape]
+insert = "bar"
 
 [editor.lsp]
 display-messages = true
@@ -31,6 +34,7 @@ C-h = "select_prev_sibling"
 C-j = "shrink_selection"
 C-k = "expand_selection"
 C-l = "select_next_sibling"
+C-f = "file_picker_in_current_buffer_directory"
 
 # Personal preference
 o = ["open_below", "normal_mode"]
